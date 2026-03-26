@@ -13,7 +13,7 @@ namespace SimpleCalculator
             InitializeComponent();
         }
 
-        
+
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -96,19 +96,46 @@ namespace SimpleCalculator
             {
                 currentOperator = "+";
                 isSecondInput = true;
-                txtExpression.Text = firstOperand+ " " + currentOperator;
+                txtExpression.Text = firstOperand + " " + currentOperator;
             }
         }
-        
-        
+
+
         //는 버튼
         private void btnEqual_Click(object sender, EventArgs e)
         {
-            if (firstOperand != "" && secondOperand != "" && currentOperator == "+")
+            if (firstOperand != "" && secondOperand != "" && currentOperator != "")
             {
                 int n1 = int.Parse(firstOperand);
                 int n2 = int.Parse(secondOperand);
-                int result = n1 + n2;
+
+                //과제 2 추가
+                int result = 0;
+
+                if (currentOperator == "+")
+                {
+                    result = n1 + n2;
+                }
+                else if (currentOperator == "-")
+                {
+                    result = n1 - n2;
+                }
+                else if (currentOperator == "*")
+                {
+                    result = n1 * n2;
+                }
+                else if (currentOperator == "/")
+                {
+                    result = n1 / n2;
+                }
+                //여기까지
+               
+
+              
+
+                
+
+
 
                 txtExpression.Text = firstOperand + " " + currentOperator + " " + secondOperand + " = " + result.ToString();
                 txtResult.Text = result.ToString();
@@ -120,13 +147,37 @@ namespace SimpleCalculator
             }
         }
 
+        private void btnSubtract_Click(object sender, EventArgs e)
+        {
+            if (firstOperand != "")
+            {
+                currentOperator = "-";
+                isSecondInput = true;
+                txtExpression.Text = firstOperand + " " + currentOperator;
+            }
+        }
+
+        private void btnMultiply_Click(object sender, EventArgs e)
+        {
+            if (firstOperand != "")
+            {
+                currentOperator = "*";
+                isSecondInput = true;
+                txtExpression.Text = firstOperand + " " + currentOperator;
+            }
+        }
+
+        private void btnDivide_Click(object sender, EventArgs e)
+        {
 
 
-
-
-
-
-
+            if (firstOperand != "")
+            {
+                currentOperator = "/";
+                isSecondInput = true;
+                txtExpression.Text = firstOperand + " " + currentOperator;
+            }
+        }
+    }
     }
 
-}

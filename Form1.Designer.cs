@@ -46,9 +46,9 @@
             btnCe = new Button();
             btnC = new Button();
             btnDel = new Button();
-            button4 = new Button();
-            button5 = new Button();
-            btn = new Button();
+            btnDivide = new Button();
+            btnMultiply = new Button();
+            btnSubtract = new Button();
             button7 = new Button();
             button8 = new Button();
             SuspendLayout();
@@ -240,35 +240,38 @@
             btnDel.Text = "del";
             btnDel.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // btnDivide
             // 
-            button4.Font = new Font("맑은 고딕", 12F, FontStyle.Bold);
-            button4.Location = new Point(489, 182);
-            button4.Name = "button4";
-            button4.Size = new Size(106, 54);
-            button4.TabIndex = 18;
-            button4.Text = "÷";
-            button4.UseVisualStyleBackColor = true;
+            btnDivide.Font = new Font("맑은 고딕", 12F, FontStyle.Bold);
+            btnDivide.Location = new Point(489, 182);
+            btnDivide.Name = "btnDivide";
+            btnDivide.Size = new Size(106, 54);
+            btnDivide.TabIndex = 18;
+            btnDivide.Text = "÷";
+            btnDivide.UseVisualStyleBackColor = true;
+            btnDivide.Click += btnDivide_Click;
             // 
-            // button5
+            // btnMultiply
             // 
-            button5.Font = new Font("맑은 고딕", 12F, FontStyle.Bold);
-            button5.Location = new Point(489, 242);
-            button5.Name = "button5";
-            button5.Size = new Size(106, 54);
-            button5.TabIndex = 19;
-            button5.Text = "X";
-            button5.UseVisualStyleBackColor = true;
+            btnMultiply.Font = new Font("맑은 고딕", 12F, FontStyle.Bold);
+            btnMultiply.Location = new Point(489, 242);
+            btnMultiply.Name = "btnMultiply";
+            btnMultiply.Size = new Size(106, 54);
+            btnMultiply.TabIndex = 19;
+            btnMultiply.Text = "X";
+            btnMultiply.UseVisualStyleBackColor = true;
+            btnMultiply.Click += btnMultiply_Click;
             // 
-            // btn
+            // btnSubtract
             // 
-            btn.Font = new Font("맑은 고딕", 12F, FontStyle.Bold);
-            btn.Location = new Point(489, 302);
-            btn.Name = "btn";
-            btn.Size = new Size(106, 54);
-            btn.TabIndex = 20;
-            btn.Text = "-";
-            btn.UseVisualStyleBackColor = true;
+            btnSubtract.Font = new Font("맑은 고딕", 12F, FontStyle.Bold);
+            btnSubtract.Location = new Point(489, 302);
+            btnSubtract.Name = "btnSubtract";
+            btnSubtract.Size = new Size(106, 54);
+            btnSubtract.TabIndex = 20;
+            btnSubtract.Text = "-";
+            btnSubtract.UseVisualStyleBackColor = true;
+            btnSubtract.Click += btnSubtract_Click;
             // 
             // button7
             // 
@@ -297,9 +300,9 @@
             ClientSize = new Size(800, 560);
             Controls.Add(button8);
             Controls.Add(button7);
-            Controls.Add(btn);
-            Controls.Add(button5);
-            Controls.Add(button4);
+            Controls.Add(btnSubtract);
+            Controls.Add(btnMultiply);
+            Controls.Add(btnDivide);
             Controls.Add(btnDel);
             Controls.Add(btnC);
             Controls.Add(btnCe);
@@ -345,9 +348,9 @@
         private Button btnCe;
         private Button btnC;
         private Button btnDel;
-        private Button button4;
-        private Button button5;
-        private Button btn;
+        private Button btnDivide;
+        private Button btnMultiply;
+        private Button btnSubtract;
         private Button button7;
         private Button button8;
     }
