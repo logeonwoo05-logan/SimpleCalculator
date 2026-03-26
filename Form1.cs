@@ -9,6 +9,7 @@ namespace SimpleCalculator
         string secondOperand = "";
         string currentOperator = "";
         bool isSecondInput = false;
+       
         //과제 4
         //결과 확인 후 숫자 누르면 앞 계산 값이 붙어 나옴
         bool isResultDisplayed = false;
@@ -167,6 +168,7 @@ namespace SimpleCalculator
                 secondOperand = "";
                 currentOperator = "";
                 isSecondInput = false;
+                isResultDisplayed = true; 
                 isResultDisplayed = true;
             }
         }
@@ -239,9 +241,14 @@ namespace SimpleCalculator
         private void btnDel_Click(object sender, EventArgs e)
         {
             //과제 4 추가
-            isResultDisplayed = false;
+            
             //
 
+            //피드백 후 추가
+            if (isResultDisplayed == true)
+            {
+                return;
+            }
 
             if (isSecondInput == false)
             {
@@ -261,6 +268,9 @@ namespace SimpleCalculator
                     txtResult.Text = secondOperand;
                 }
             }
+
+            //
+            
         }
 
         private void txtExpression_TextChanged(object sender, EventArgs e)
