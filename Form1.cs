@@ -129,11 +129,11 @@ namespace SimpleCalculator
                     result = n1 / n2;
                 }
                 //여기까지
-               
 
-              
 
-                
+
+
+
 
 
 
@@ -178,6 +178,55 @@ namespace SimpleCalculator
                 txtExpression.Text = firstOperand + " " + currentOperator;
             }
         }
+
+        private void btnC_Click(object sender, EventArgs e)
+        {
+            firstOperand = "";
+            secondOperand = "";
+            currentOperator = "";
+            isSecondInput = false;
+
+            txtExpression.Text = "";
+            txtResult.Text = "";
+        }
+
+        private void btnCe_Click(object sender, EventArgs e)
+        {
+            if (isSecondInput == false)
+            {
+                firstOperand = "";
+                txtExpression.Text = "";
+                txtResult.Text = "";
+            }
+            else
+            {
+                secondOperand = "";
+                txtExpression.Text = firstOperand + " " + currentOperator;
+                txtResult.Text = "";
+            }
+        }
+
+        private void btnDel_Click(object sender, EventArgs e)
+        {
+            if (isSecondInput == false)
+            {
+                if (firstOperand.Length > 0)
+                {
+                    firstOperand = firstOperand.Remove(firstOperand.Length - 1);
+                    txtExpression.Text = firstOperand;
+                    txtResult.Text = firstOperand;
+                }
+            }
+            else
+            {
+                if (secondOperand.Length > 0)
+                {
+                    secondOperand = secondOperand.Remove(secondOperand.Length - 1);
+                    txtExpression.Text = firstOperand + " " + currentOperator + " " + secondOperand;
+                    txtResult.Text = secondOperand;
+                }
+            }
+        }
     }
-    }
+}
 
