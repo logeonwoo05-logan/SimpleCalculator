@@ -127,7 +127,7 @@ namespace SimpleCalculator
             }
 
             expression += s;
-            txtExpression.Text = expression;
+            txtExpression.Text = GetDisplayExpression(expression);
         }
 
         private void EvaluateAndDisplay()
@@ -148,7 +148,7 @@ namespace SimpleCalculator
                 else
                     resultStr = result.ToString(CultureInfo.InvariantCulture);
 
-                txtExpression.Text = expression + " = " + resultStr;
+                txtExpression.Text = GetDisplayExpression(expression) + " = " + resultStr;
                 txtResult.Text = resultStr;
 
                 // 결과를 다음 계산에서 사용할 수 있도록 상태 갱신
@@ -340,6 +340,13 @@ namespace SimpleCalculator
         }
 
         private static bool IsLeftAssociative(string op) => op != "^"; // '^' 없음, 기본 왼쪽 결합
+
+        // 내부 수식 문자열을 화면용으로 변환 (연산자 심볼 변경)
+        private string GetDisplayExpression(string expr)
+        {
+            if (string.IsNullOrEmpty(expr)) return expr;
+            return expr.Replace("/", "÷").Replace("*", "X");
+        }
 
 
         //숫자 버튼
