@@ -1,0 +1,354 @@
+﻿namespace SimpleCalculator
+{
+    partial class Form1
+    {
+        /// <summary>
+        ///  Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        ///  Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        ///  Required method for Designer support - do not modify
+        ///  the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            txtExpression = new TextBox();
+            txtResult = new TextBox();
+            btn7 = new Button();
+            btn8 = new Button();
+            btn9 = new Button();
+            btn4 = new Button();
+            btn5 = new Button();
+            btn6 = new Button();
+            btn1 = new Button();
+            btn2 = new Button();
+            btn3 = new Button();
+            btn0 = new Button();
+            btnAdd = new Button();
+            btnEqual = new Button();
+            txtTit = new Label();
+            btnCe = new Button();
+            btnC = new Button();
+            btnDel = new Button();
+            button4 = new Button();
+            button5 = new Button();
+            button6 = new Button();
+            button7 = new Button();
+            button8 = new Button();
+            SuspendLayout();
+            // 
+            // txtExpression
+            // 
+            txtExpression.Location = new Point(114, 83);
+            txtExpression.Name = "txtExpression";
+            txtExpression.Size = new Size(430, 39);
+            txtExpression.TabIndex = 0;
+            // 
+            // txtResult
+            // 
+            txtResult.Location = new Point(114, 137);
+            txtResult.Name = "txtResult";
+            txtResult.Size = new Size(430, 39);
+            txtResult.TabIndex = 1;
+            // 
+            // btn7
+            // 
+            btn7.Font = new Font("맑은 고딕", 12F, FontStyle.Bold);
+            btn7.Location = new Point(114, 242);
+            btn7.Name = "btn7";
+            btn7.Size = new Size(106, 54);
+            btn7.TabIndex = 2;
+            btn7.Text = "7";
+            btn7.UseVisualStyleBackColor = true;
+            btn7.Click += btn7_Click;
+            // 
+            // btn8
+            // 
+            btn8.Font = new Font("맑은 고딕", 12F, FontStyle.Bold);
+            btn8.Location = new Point(243, 242);
+            btn8.Name = "btn8";
+            btn8.Size = new Size(106, 54);
+            btn8.TabIndex = 3;
+            btn8.Text = "8";
+            btn8.UseVisualStyleBackColor = true;
+            btn8.Click += btn8_Click;
+            // 
+            // btn9
+            // 
+            btn9.Font = new Font("맑은 고딕", 12F, FontStyle.Bold);
+            btn9.Location = new Point(367, 242);
+            btn9.Name = "btn9";
+            btn9.Size = new Size(106, 54);
+            btn9.TabIndex = 4;
+            btn9.Text = "9";
+            btn9.UseVisualStyleBackColor = true;
+            btn9.Click += btn9_Click;
+            // 
+            // btn4
+            // 
+            btn4.Font = new Font("맑은 고딕", 12F, FontStyle.Bold);
+            btn4.Location = new Point(114, 302);
+            btn4.Name = "btn4";
+            btn4.Size = new Size(106, 54);
+            btn4.TabIndex = 5;
+            btn4.Text = "4";
+            btn4.UseVisualStyleBackColor = true;
+            btn4.Click += btn4_Click;
+            // 
+            // btn5
+            // 
+            btn5.Font = new Font("맑은 고딕", 12F, FontStyle.Bold);
+            btn5.Location = new Point(243, 302);
+            btn5.Name = "btn5";
+            btn5.Size = new Size(106, 54);
+            btn5.TabIndex = 6;
+            btn5.Text = "5";
+            btn5.UseVisualStyleBackColor = true;
+            btn5.Click += btn5_Click;
+            // 
+            // btn6
+            // 
+            btn6.Font = new Font("맑은 고딕", 12F, FontStyle.Bold);
+            btn6.Location = new Point(367, 302);
+            btn6.Name = "btn6";
+            btn6.Size = new Size(106, 54);
+            btn6.TabIndex = 7;
+            btn6.Text = "6";
+            btn6.UseVisualStyleBackColor = true;
+            btn6.Click += btn6_Click;
+            // 
+            // btn1
+            // 
+            btn1.Font = new Font("맑은 고딕", 12F, FontStyle.Bold);
+            btn1.Location = new Point(114, 362);
+            btn1.Name = "btn1";
+            btn1.Size = new Size(106, 54);
+            btn1.TabIndex = 8;
+            btn1.Text = "1";
+            btn1.UseVisualStyleBackColor = true;
+            btn1.Click += btn1_Click;
+            // 
+            // btn2
+            // 
+            btn2.Font = new Font("맑은 고딕", 12F, FontStyle.Bold);
+            btn2.Location = new Point(243, 362);
+            btn2.Name = "btn2";
+            btn2.Size = new Size(106, 54);
+            btn2.TabIndex = 9;
+            btn2.Text = "2";
+            btn2.UseVisualStyleBackColor = true;
+            btn2.Click += btn2_Click;
+            // 
+            // btn3
+            // 
+            btn3.Font = new Font("맑은 고딕", 12F, FontStyle.Bold);
+            btn3.Location = new Point(367, 362);
+            btn3.Name = "btn3";
+            btn3.Size = new Size(106, 54);
+            btn3.TabIndex = 10;
+            btn3.Text = "3";
+            btn3.UseVisualStyleBackColor = true;
+            btn3.Click += btn3_Click;
+            // 
+            // btn0
+            // 
+            btn0.Font = new Font("맑은 고딕", 12F, FontStyle.Bold);
+            btn0.Location = new Point(243, 422);
+            btn0.Name = "btn0";
+            btn0.Size = new Size(106, 54);
+            btn0.TabIndex = 11;
+            btn0.Text = "0";
+            btn0.UseVisualStyleBackColor = true;
+            btn0.Click += btn0_Click;
+            // 
+            // btnAdd
+            // 
+            btnAdd.Font = new Font("맑은 고딕", 12F, FontStyle.Bold);
+            btnAdd.Location = new Point(489, 362);
+            btnAdd.Name = "btnAdd";
+            btnAdd.Size = new Size(106, 54);
+            btnAdd.TabIndex = 12;
+            btnAdd.Text = "+";
+            btnAdd.UseVisualStyleBackColor = true;
+            btnAdd.Click += btnAdd_Click;
+            // 
+            // btnEqual
+            // 
+            btnEqual.Font = new Font("맑은 고딕", 12F, FontStyle.Bold);
+            btnEqual.Location = new Point(489, 422);
+            btnEqual.Name = "btnEqual";
+            btnEqual.Size = new Size(106, 54);
+            btnEqual.TabIndex = 13;
+            btnEqual.Text = "=";
+            btnEqual.UseVisualStyleBackColor = true;
+            btnEqual.Click += btnEqual_Click;
+            // 
+            // txtTit
+            // 
+            txtTit.AutoSize = true;
+            txtTit.Font = new Font("맑은 고딕", 15F, FontStyle.Bold);
+            txtTit.ForeColor = SystemColors.HotTrack;
+            txtTit.Location = new Point(58, 9);
+            txtTit.Name = "txtTit";
+            txtTit.Size = new Size(357, 54);
+            txtTit.TabIndex = 14;
+            txtTit.Text = "Simple Calculator";
+            // 
+            // btnCe
+            // 
+            btnCe.Font = new Font("맑은 고딕", 12F, FontStyle.Bold);
+            btnCe.Location = new Point(114, 182);
+            btnCe.Name = "btnCe";
+            btnCe.Size = new Size(106, 54);
+            btnCe.TabIndex = 15;
+            btnCe.Text = "CE";
+            btnCe.UseVisualStyleBackColor = true;
+            // 
+            // btnC
+            // 
+            btnC.Font = new Font("맑은 고딕", 12F, FontStyle.Bold);
+            btnC.Location = new Point(243, 182);
+            btnC.Name = "btnC";
+            btnC.Size = new Size(106, 54);
+            btnC.TabIndex = 16;
+            btnC.Text = "C";
+            btnC.UseVisualStyleBackColor = true;
+            // 
+            // btnDel
+            // 
+            btnDel.Font = new Font("맑은 고딕", 12F, FontStyle.Bold);
+            btnDel.Location = new Point(367, 182);
+            btnDel.Name = "btnDel";
+            btnDel.Size = new Size(106, 54);
+            btnDel.TabIndex = 17;
+            btnDel.Text = "del";
+            btnDel.UseVisualStyleBackColor = true;
+            // 
+            // button4
+            // 
+            button4.Font = new Font("맑은 고딕", 12F, FontStyle.Bold);
+            button4.Location = new Point(489, 182);
+            button4.Name = "button4";
+            button4.Size = new Size(106, 54);
+            button4.TabIndex = 18;
+            button4.Text = "÷";
+            button4.UseVisualStyleBackColor = true;
+            // 
+            // button5
+            // 
+            button5.Font = new Font("맑은 고딕", 12F, FontStyle.Bold);
+            button5.Location = new Point(489, 242);
+            button5.Name = "button5";
+            button5.Size = new Size(106, 54);
+            button5.TabIndex = 19;
+            button5.Text = "X";
+            button5.UseVisualStyleBackColor = true;
+            // 
+            // button6
+            // 
+            button6.Font = new Font("맑은 고딕", 12F, FontStyle.Bold);
+            button6.Location = new Point(489, 302);
+            button6.Name = "button6";
+            button6.Size = new Size(106, 54);
+            button6.TabIndex = 20;
+            button6.Text = "-";
+            button6.UseVisualStyleBackColor = true;
+            // 
+            // button7
+            // 
+            button7.Font = new Font("맑은 고딕", 12F, FontStyle.Bold);
+            button7.Location = new Point(367, 422);
+            button7.Name = "button7";
+            button7.Size = new Size(106, 54);
+            button7.TabIndex = 21;
+            button7.Text = ".";
+            button7.UseVisualStyleBackColor = true;
+            // 
+            // button8
+            // 
+            button8.Font = new Font("맑은 고딕", 12F, FontStyle.Bold);
+            button8.Location = new Point(114, 422);
+            button8.Name = "button8";
+            button8.Size = new Size(106, 54);
+            button8.TabIndex = 22;
+            button8.Text = "+/-";
+            button8.UseVisualStyleBackColor = true;
+            // 
+            // Form1
+            // 
+            AutoScaleDimensions = new SizeF(14F, 32F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(800, 560);
+            Controls.Add(button8);
+            Controls.Add(button7);
+            Controls.Add(button6);
+            Controls.Add(button5);
+            Controls.Add(button4);
+            Controls.Add(btnDel);
+            Controls.Add(btnC);
+            Controls.Add(btnCe);
+            Controls.Add(txtTit);
+            Controls.Add(btnEqual);
+            Controls.Add(btnAdd);
+            Controls.Add(btn0);
+            Controls.Add(btn3);
+            Controls.Add(btn2);
+            Controls.Add(btn1);
+            Controls.Add(btn6);
+            Controls.Add(btn5);
+            Controls.Add(btn4);
+            Controls.Add(btn9);
+            Controls.Add(btn8);
+            Controls.Add(btn7);
+            Controls.Add(txtResult);
+            Controls.Add(txtExpression);
+            Name = "Form1";
+            Text = "Form1";
+            Load += Form1_Load;
+            ResumeLayout(false);
+            PerformLayout();
+        }
+
+        #endregion
+
+        private TextBox txtExpression;
+        private TextBox txtResult;
+        private Button btn7;
+        private Button btn8;
+        private Button btn9;
+        private Button btn4;
+        private Button btn5;
+        private Button btn6;
+        private Button btn1;
+        private Button btn2;
+        private Button btn3;
+        private Button btn0;
+        private Button btnAdd;
+        private Button btnEqual;
+        private Label txtTit;
+        private Button btnCe;
+        private Button btnC;
+        private Button btnDel;
+        private Button button4;
+        private Button button5;
+        private Button button6;
+        private Button button7;
+        private Button button8;
+    }
+}
