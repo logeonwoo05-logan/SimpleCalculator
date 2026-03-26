@@ -48,7 +48,7 @@
             btnDel = new Button();
             button4 = new Button();
             button5 = new Button();
-            button6 = new Button();
+            btn = new Button();
             button7 = new Button();
             button8 = new Button();
             SuspendLayout();
@@ -260,15 +260,15 @@
             button5.Text = "X";
             button5.UseVisualStyleBackColor = true;
             // 
-            // button6
+            // btn
             // 
-            button6.Font = new Font("맑은 고딕", 12F, FontStyle.Bold);
-            button6.Location = new Point(489, 302);
-            button6.Name = "button6";
-            button6.Size = new Size(106, 54);
-            button6.TabIndex = 20;
-            button6.Text = "-";
-            button6.UseVisualStyleBackColor = true;
+            btn.Font = new Font("맑은 고딕", 12F, FontStyle.Bold);
+            btn.Location = new Point(489, 302);
+            btn.Name = "btn";
+            btn.Size = new Size(106, 54);
+            btn.TabIndex = 20;
+            btn.Text = "-";
+            btn.UseVisualStyleBackColor = true;
             // 
             // button7
             // 
@@ -297,7 +297,7 @@
             ClientSize = new Size(800, 560);
             Controls.Add(button8);
             Controls.Add(button7);
-            Controls.Add(button6);
+            Controls.Add(btn);
             Controls.Add(button5);
             Controls.Add(button4);
             Controls.Add(btnDel);
@@ -347,7 +347,7 @@
         private Button btnDel;
         private Button button4;
         private Button button5;
-        private Button button6;
+        private Button btn;
         private Button button7;
         private Button button8;
     }
