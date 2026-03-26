@@ -59,6 +59,7 @@
             txtExpression.Name = "txtExpression";
             txtExpression.Size = new Size(430, 39);
             txtExpression.TabIndex = 0;
+            txtExpression.TextChanged += txtExpression_TextChanged;
             // 
             // txtResult
             // 
@@ -66,6 +67,7 @@
             txtResult.Name = "txtResult";
             txtResult.Size = new Size(430, 39);
             txtResult.TabIndex = 1;
+            txtResult.TextChanged += txtResult_TextChanged;
             // 
             // btn7
             // 

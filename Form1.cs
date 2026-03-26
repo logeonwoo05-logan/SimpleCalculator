@@ -1,12 +1,17 @@
 namespace SimpleCalculator
 {
+
+
+
     public partial class Form1 : Form
     {
         string firstOperand = "";
         string secondOperand = "";
         string currentOperator = "";
         bool isSecondInput = false;
-
+        //과제 4
+        //결과 확인 후 숫자 누르면 앞 계산 값이 붙어 나옴
+        bool isResultDisplayed = false;
 
         public Form1()
         {
@@ -23,20 +28,39 @@ namespace SimpleCalculator
         //아 이게 뭐지...
         private void InputNumber(string number)
         {
+            if (isResultDisplayed == true)
+            {
+                firstOperand = "";
+                secondOperand = "";
+                currentOperator = "";
+                isSecondInput = false;
+                txtExpression.Text = "";
+                txtResult.Text = "";
+                isResultDisplayed = false;
+            }
+
             if (isSecondInput == false)
             {
+                if (firstOperand == "" && number == "0")
+                {
+                    return;
+                }
+
                 firstOperand += number;
                 txtExpression.Text = firstOperand;
                 txtResult.Text = firstOperand;
             }
             else
             {
+                if (secondOperand == "" && number == "0")
+                {
+                    return;
+                }
+
                 secondOperand += number;
-                txtExpression.Text = firstOperand + " " + currentOperator + " " + secondOperand;
-                txtResult.Text = secondOperand;
+                txtExpression.Text = firstOperand + " " + GetDisplayOperator() + " " + secondOperand;                txtResult.Text = secondOperand;
             }
         }
-
 
         //숫자 버튼
         private void btn0_Click(object sender, EventArgs e)
@@ -96,7 +120,7 @@ namespace SimpleCalculator
             {
                 currentOperator = "+";
                 isSecondInput = true;
-                txtExpression.Text = firstOperand + " " + currentOperator;
+                txtExpression.Text = firstOperand + " " + GetDisplayOperator();
             }
         }
 
@@ -136,14 +160,14 @@ namespace SimpleCalculator
 
 
 
-
-                txtExpression.Text = firstOperand + " " + currentOperator + " " + secondOperand + " = " + result.ToString();
+                txtExpression.Text = firstOperand + " " + GetDisplayOperator() + " " + secondOperand + " = " + result.ToString();
                 txtResult.Text = result.ToString();
 
                 firstOperand = result.ToString();
                 secondOperand = "";
                 currentOperator = "";
                 isSecondInput = false;
+                isResultDisplayed = true;
             }
         }
 
@@ -153,7 +177,7 @@ namespace SimpleCalculator
             {
                 currentOperator = "-";
                 isSecondInput = true;
-                txtExpression.Text = firstOperand + " " + currentOperator;
+                txtExpression.Text = firstOperand + " " + GetDisplayOperator();
             }
         }
 
@@ -163,7 +187,7 @@ namespace SimpleCalculator
             {
                 currentOperator = "*";
                 isSecondInput = true;
-                txtExpression.Text = firstOperand + " " + currentOperator;
+                txtExpression.Text = firstOperand + " " + GetDisplayOperator();
             }
         }
 
@@ -175,7 +199,7 @@ namespace SimpleCalculator
             {
                 currentOperator = "/";
                 isSecondInput = true;
-                txtExpression.Text = firstOperand + " " + currentOperator;
+                txtExpression.Text = firstOperand + " " + GetDisplayOperator();
             }
         }
 
@@ -185,6 +209,7 @@ namespace SimpleCalculator
             secondOperand = "";
             currentOperator = "";
             isSecondInput = false;
+            isResultDisplayed = false;
 
             txtExpression.Text = "";
             txtResult.Text = "";
@@ -192,6 +217,11 @@ namespace SimpleCalculator
 
         private void btnCe_Click(object sender, EventArgs e)
         {
+            //과제 4추가
+            isResultDisplayed = false;
+            // 
+
+
             if (isSecondInput == false)
             {
                 firstOperand = "";
@@ -201,13 +231,18 @@ namespace SimpleCalculator
             else
             {
                 secondOperand = "";
-                txtExpression.Text = firstOperand + " " + currentOperator;
+                txtExpression.Text = firstOperand + " " + GetDisplayOperator();
                 txtResult.Text = "";
             }
         }
 
         private void btnDel_Click(object sender, EventArgs e)
         {
+            //과제 4 추가
+            isResultDisplayed = false;
+            //
+
+
             if (isSecondInput == false)
             {
                 if (firstOperand.Length > 0)
@@ -227,6 +262,39 @@ namespace SimpleCalculator
                 }
             }
         }
+
+        private void txtExpression_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtResult_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private string GetDisplayOperator()
+        {
+            if (currentOperator == "/")
+            {
+                return "÷";
+            }
+            else if (currentOperator == "*")
+            {
+                return "X";
+            }
+
+            return currentOperator;
+        }
+
+
+
+
+
+
+
+
+
     }
 }
 
